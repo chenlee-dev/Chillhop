@@ -1,0 +1,719 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    /* background-color: rgb(36, 36, 36); */
+}
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1d1d;
+    height: 80px;
+    width: 100%;
+}
+
+nav > div,
+.checkbtn,
+.fa-bars, .fa-napster,
+.logo-img,
+.checkbtn-login{
+    background-color: inherit;
+}
+
+.logo-img{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+}
+
+a:hover{
+    transition: 1s;
+}
+.checkbtn{
+    font-size: 30px;
+    line-height: 80px;
+    margin-left: 40px;
+    cursor: pointer;
+    display: block;
+   
+}
+
+#check{
+    display:none;
+}
+.drop-ul{
+    position: fixed;
+    width: 20%;
+    height: 60vh;
+    left: -100%;
+    transition: all 1s;
+    padding: 0px 10px;
+    /* box-shadow: ; */
+    z-index: 1;
+}
+.drop-ul li{
+    display: block;
+    padding: 20px 10px;
+}
+#check:checked ~ ul {
+    left: 0;
+}
+
+
+/* this is for login form */
+.checkbtn-login{
+    font-size: 35px;
+    line-height: 80px;
+    margin-right: 40px;
+    /* cursor: pointer; */
+    display: block;
+    pointer-events: none;
+}
+
+form{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 1s;
+}
+form label{
+    display: block;
+}
+#cb1 {
+    position: absolute;
+    top: 33px;
+    right: 50px;
+    cursor: pointer;
+}
+#cb1:checked ~ form{
+    left: 0;
+}
+
+/* playing now */
+.big-container{
+    background: url('./pic/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpeg');
+    background-size: cover;
+}
+.playing-container,
+.playing-container > div,
+.playing-container > div > img,
+.song-details,
+.song-details h1,
+.song-details > p,
+.else > h3,
+.else-drop li{
+    background-color: inherit;
+}
+
+.playing-container{
+    display: flex;
+    width: 100%;
+    height: 280px;
+    /* margin: 50px 0px; */
+}
+
+.playing-container > div{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    /* justify-content: center; */
+    align-items: center;
+ 
+}
+.playing-container > div > img{
+    width: 280px;
+    height: 280px;
+    padding-right: 20px;
+   
+}
+.song-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 280px;
+    width: 40%;
+  
+}
+.song-details h1{
+    font-size: 45px;
+   
+}
+.song-details > p{
+    overflow: hidden;
+    line-height: 1.2rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.else{
+    display: flex;
+    justify-content: space-around;
+}
+.else > h3{
+    border-radius: 20px;
+    padding: 9px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.else > h3:nth-child(1){
+    background-color: #FB0D1B;
+}
+.else > h3:nth-child(2){
+    background-color: #1DB954;
+}
+.else > h3:nth-child(2) .fab{
+    background-color: transparent;
+}
+
+.else-drop {
+    width: 100%;
+    text-align: center;
+}
+.else-drop li{
+    width: 80px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+.drop-menu{
+    position: relative;
+}
+.else-drop:hover .drop{
+    display: block;
+    cursor: pointer;
+}
+.drop{
+    position:absolute;
+    top: 104%;
+    display: none;
+}
+.drop li{
+    padding: 10px 0px;
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+/* latest release  */
+.latest-release, 
+.text-latest-release,
+.album > div,
+.album > div > img,
+.album > div > h3,
+.latest-release > div > h3,
+.latest-release > div,
+.album > div > h3 > strong{
+    background-color: inherit;
+}
+
+.latest-release{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:inherit;
+    padding: 20px 0px;
+}
+.text-latest-release{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background-color: inherit;
+
+}
+.album{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    width: 80%;
+}
+.album div{
+    padding-top: 20px;
+    width: 30%;
+}
+.album img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+
+/* listen-to-logo */
+
+.listen-to-logo{
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    padding: 70px 0px;
+    text-align: center;
+}
+.listen-to-logo h3{
+    color: rgb(71, 71, 71);
+    font-size: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+.logo{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin: auto;
+    height: 100%;
+    flex-wrap: wrap;
+    background-color: white;
+
+}
+.logo h3{
+    width: 250px;
+    font-size: 30px;
+    padding: 0px 10px;
+    background-color: white;
+    color: #999999;
+}
+.logo i{
+    background-color: white;
+    color: rgb(71, 71, 71);
+}
+
+
+/* Artist section */
+
+.details-container{
+    background: url('./pic/EVGj5gIUMAAheHg.jpeg') no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    height: 500px;
+    padding: 30px ;
+    width: 100%;
+}
+.details{
+    width: 70%;
+    margin:auto;
+    height: 100%;
+    text-align: center;
+    background-color: initial;
+    padding: 10% 0px;
+}
+.details h1{
+    font-weight: 800;
+    font-family: 'Abril Fatface' , sans-serif;
+    font-size: 35px;
+}
+.details h3{
+    padding: 15px 0px;
+    height: 70px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.details h1, .details p, .details h3{
+    background-color: inherit;
+}
+.details button{
+    background-color: transparent;
+    border-radius: 20px;
+    width: 135px;
+    height: 40px;
+    border: 1px solid white;
+    outline: none;
+    font-size: 18px;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+.details button:hover{
+    background-color:rgba(221, 221, 221, 0.5);
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+    top: 40%;
+    user-select: none;
+    -webkit-user-select: none;
+    margin: 0px 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 8px 0px;
+}
+.next{
+    right: 0;
+}
+.next:hover,
+.prev:hover{
+    background-color: rgba(221, 221, 221, 0.5);
+    color: black;
+}
+
+/* shop-item */
+.shop-container{
+    padding: 60px 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.shop-container > div:nth-child(1){
+    width: 80%;
+    margin:auto;
+    padding: 20px 0px;
+}
+.shop-container > div:nth-child(1) > h3{
+    display: inline;
+    color: black;
+}
+.shop-container > div:nth-child(1) >h3:nth-child(1){
+    font-family: 'Abril Fatface' , sans-serif;
+}
+.shop-container > div:nth-child(1) >h3:nth-child(2){
+    padding: 10px 15px;
+    margin: 0px 20px;
+    border: 1px solid black;
+    font-family: 'Abril Fatface' , sans-serif;
+}
+.web-shop{  
+    float: right;
+}
+.web-shop i{
+    color: black;
+}
+.shop-items{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+.shop-items img{
+    width: 20%;
+    height: auto;
+}
+
+/* Subscribe */
+.user-menu{
+    width: 80%;
+    margin:auto;
+    padding:20px 0px;
+}
+.user-menu{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.spotify{
+    flex-grow: 1;
+}
+.follow{
+    display: flex;
+    align-items: baseline;
+}
+.follow button{
+    background-color: #1DB954;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+.subscribe-container{
+    width: 100%;
+    padding: 75px 0px;
+    background-color: black;
+}
+.subscribe-users{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+}
+.user img{
+   width: 100%;
+   height: 70%;
+}
+.user h3{
+    text-align: center;
+    padding: 10px 0px;
+}
+.user button{
+    background-color: #1DB954;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* social container */
+.social-container h3, .social-container i{
+    color: #999999;
+    font-size: 25px;
+}
+.social-container{
+    padding: 60px 0px;
+    width: 100%;
+    color: black;
+} 
+.social{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.social-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+/* youtube container */
+
+.youtube-container{
+    background: url('/css/pic/wp4783968.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 75px 0px;
+    width: 100%;
+}
+
+.youtube-flex{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+.youtube-logo{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.yb-logo{
+    display: flex;
+}
+.yb-logo i{
+    font-size: 80px;
+    color: red;
+    padding: 0px 5px;
+}
+.yb-logo h3{
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.youtube-logo .fa-check-square{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.youtube-follow{
+    display: flex;
+    align-items: baseline;
+}
+
+.youtube-follow button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 10px;
+    height: 40px;
+    color: black;
+}
+.youtube-follow h3{
+    display: inline;
+}
+
+.livestream{
+    text-align: center;
+}
+.livestream button{
+    padding: 20px 30px;
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.small-logo{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+    padding: 70px 0px;
+    font-size: 20px;
+}
+
+/* ins container */
+.ins-container{
+    padding: 80px 0px;
+    background-color:rgba(221, 221, 221, 0.5);
+    width: 100%;
+}
+.ins-logo{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+}
+.i-logo{
+    display: flex;
+}
+.i-logo i{
+    font-size: 45px;
+    padding: 5px;
+    color: black;
+}
+.i-logo h3{
+    padding: 15px 0px;
+    color: black;
+}
+
+.follow-ins{
+    display: flex;
+    align-items: baseline;
+}
+.follow-ins button{
+    height: 40px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #458eff;
+    cursor: pointer;
+}
+.follow-ins h3, .follow-ins i{
+    color: black;
+}
+.follow-ins h3{
+    padding: 0px 10px;
+}
+
+.ins-img{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.ins-img img{
+    width: 20%;
+    padding: 0px 10px;
+}
+
+/* footer */
+.footer-container{
+    background-color:rgb(71, 71, 71);
+    padding: 50px 0px;
+    width: 100%;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:auto;
+    padding: 10px 0px;
+}
+.info, .info-logo{
+    display: flex;
+
+}
+.info h3, .info-logo i{
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+
+.contact-info{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.info-1{
+    display: flex;
+    padding: 10px 0px;
+}
+.info-1 h3{
+    padding: 0px 10px;
+}
+.contact-info > h3{
+    padding: 0px 10px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1472px){
+    .logo h3{
+        width: 210px;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .logo h3{
+        width: auto;
+    }
+    .logo{
+        width: 80%;
+    }
+    /* .album{
+        flex-wrap: wrap;
+    } */
+    .album div:nth-child(5){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .album div:nth-child(4){
+        display: none;
+    }
+}
