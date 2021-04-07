@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="nav-bar">
             <div class="nav-dropdown">
                 <input type="checkbox" id="check"/>
                 <label for="check" class="checkbtn">
@@ -31,7 +31,7 @@
             </div> 
             <label class="logo-img">Chillhop</label>
             <div>
-                <input type="checkbox" id="cb1"/>
+                <!-- <input type="checkbox" id="cb1"/>
                 <label for="check" class="checkbtn-login">
                     <i class="fab fa-napster"></i>
                 </label>
@@ -40,12 +40,22 @@
                     <input type="text" id="fname" name="fname" placeholder="">
                     <label for="fname">Password</label>
                     <input type="password" id="password" name="password">
-                </form>
+                </form> -->
+                <div id="myslidepanel" class="login">
+                    <a href="javasript:void(0)" class="closebtn" onClick="closeNav()">x</a>
+                    <form action="">
+                        <label for="fname">Username:</label>
+                        <input type="text" id="fname" name="fname" placeholder="">
+                        <label for="fname">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </form>
+                </div>
+                <button class="openbtn" onClick="openNav()"><i class="fab fa-napster"></i></button>
             </div>
         </nav>
     </header>
     <main>
-        <div class="big-container">
+        <div class="big-container" id="top">
             <!-- Now playing -->
             <div class="playing-container">
                 <div>
@@ -300,6 +310,7 @@
                 <h3>© 2021 CHILLHOP MUSIC B.V.</h3>
             </div>
         </div>
+        <div class="scroll"><a href="#top"><i class="fas fa-arrow-up"></i></a></div>
     </footer>
     <script src="main.js"></script>
 </body>

@@ -8,6 +8,10 @@
     color: white;
     /* background-color: rgb(36, 36, 36); */
 }
+html{
+    scroll-behavior: smooth;
+
+}
 /* nav bar */
 nav{
     display: flex;
@@ -15,15 +19,22 @@ nav{
     background-color: #1d1d1d;
     height: 80px;
     width: 100%;
+    position: fixed;
+    z-index: 2;
+    transition: 1s all;
+    /* position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;    */
 }
 
-nav > div,
+/* nav > div,
 .checkbtn,
 .fa-bars, .fa-napster,
 .logo-img,
 .checkbtn-login{
     background-color: inherit;
-}
+} */
 
 .logo-img{
     font-family: 'Abril Fatface', sans-serif;
@@ -34,44 +45,52 @@ nav > div,
 a:hover{
     transition: 1s;
 }
+
 .checkbtn{
     font-size: 30px;
     line-height: 80px;
     margin-left: 40px;
     cursor: pointer;
     display: block;
-   
-}
-
-#check{
+    
+    }
+    
+    #check{
     display:none;
-}
-.drop-ul{
+    }
+    .drop-ul{
     position: fixed;
     width: 20%;
-    height: 60vh;
+    /* height: 53.5vh; */
+    height: 100vh;
     left: -100%;
     transition: all 1s;
     padding: 0px 10px;
-    /* box-shadow: ; */
     z-index: 1;
-}
-.drop-ul li{
+    background-color: rgba(221, 221, 221, 0.9);
+    cursor: pointer;
+    }
+    .drop-ul li{
     display: block;
     padding: 20px 10px;
-}
-#check:checked ~ ul {
+    }
+    .drop-ul li:hover{
+    background-color: rgba(221, 221, 221, 0.9);
+    }
+    #check:checked ~ ul {
     left: 0;
-}
+    }
+    
+
 
 
 /* this is for login form */
-.checkbtn-login{
+/* .checkbtn-login{
     font-size: 35px;
     line-height: 80px;
-    margin-right: 40px;
+    margin-right: 40px; */
     /* cursor: pointer; */
-    display: block;
+    /* display: block;
     pointer-events: none;
 }
 
@@ -96,14 +115,49 @@ form label{
 }
 #cb1:checked ~ form{
     left: 0;
+} */
+.login{
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 20px;
+    right: 0;
+    overflow-x: hidden;
+    transition: 1s all;
+    padding-top: 60px;
+}
+.login form{
+    background-color: rgba(221, 221, 221, 0.9);
+    padding: 30px;
+    transition: 1s all;
+}
+
+.login .closebtn{
+    position: absolute;
+    /* top: 150px; */
+    right: 25px;
+    font-size: 25px;
+}
+.openbtn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 15px;
+}
+.openbtn i{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* playing now */
 .big-container{
     background: url('./pic/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpeg');
     background-size: cover;
+    padding-top: 100px;
 }
-.playing-container,
+/* .playing-container,
 .playing-container > div,
 .playing-container > div > img,
 .song-details,
@@ -112,7 +166,7 @@ form label{
 .else > h3,
 .else-drop li{
     background-color: inherit;
-}
+} */
 
 .playing-container{
     display: flex;
@@ -182,13 +236,23 @@ form label{
     width: 100%;
     text-align: center;
 }
-.else-drop li{
+.else-drop li .fa-reply{
     width: 80px;
     height: 40px;
     border: 1px solid white;
     border-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
     padding: 10px 0px;
+    cursor: pointer;
 }
+
+.else-drop li .fa-reply:hover{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
 .drop-menu{
     position: relative;
 }
@@ -196,6 +260,7 @@ form label{
     display: block;
     cursor: pointer;
 }
+
 .drop{
     position:absolute;
     top: 104%;
@@ -205,8 +270,15 @@ form label{
     padding: 10px 0px;
     height: 40px;
     width: 80px;
-    border: none;
-    border-bottom: 1px solid white;
+    border: 1px solid white;
+    border-radius: 0px; 
+}
+.drop > li:nth-child(1){
+    border-top: none;
+}
+.drop > li:nth-child(2){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 /* latest release  */
@@ -625,7 +697,9 @@ form label{
 
 /* footer */
 .footer-container{
-    background-color:rgb(71, 71, 71);
+    /* background-color:rgb(71, 71, 71); */
+    background-color: #1d1d1d;
+
     padding: 50px 0px;
     width: 100%;
 }
@@ -665,6 +739,24 @@ form label{
  
 }
 
+/* scroll arrow */
+.scroll{
+    position: fixed;
+    right: 50px;
+    bottom: 150px;
+}
+.scroll i{
+    width: 50px;
+    height: 50px;
+    border: 1px solid  white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 15px 0px;
+    text-align: center;
+    /* color: black; */
+    font-size: 20px;
+    cursor: pointer;
+}
 
 
 

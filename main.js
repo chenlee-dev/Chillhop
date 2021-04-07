@@ -18,3 +18,26 @@ function showSlides(n){
     slides[slideIndex-1].style.display = "block";
 }
 
+// when scrolling
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function(){
+    var currentScrollPos = window.pageYOffset;
+    if(prevScrollpos > currentScrollPos){
+        document.getElementById('nav-bar').style.top = "0";
+    } else {
+        document.getElementById('nav-bar').style.top = "-100px"
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+// login
+
+function openNav(){
+    document.getElementById('myslidepanel').style.width = "20%";
+}
+function closeNav(){
+    document.getElementById('myslidepanel').style.width = "0";
+}
+
+
