@@ -49,7 +49,7 @@ display:none;
 .drop-ul{
 position: fixed;
 width: 20%;
-height: 100vh;
+height: 83.5vh;
 left: -100%;
 transition: all 1s;
 padding: 0px 10px;
