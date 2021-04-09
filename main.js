@@ -34,7 +34,7 @@ window.onscroll = function(){
 // login
 
 function openNav(){
-    document.getElementById('myslidepanel').style.width = "15%";
+    document.getElementById('myslidepanel').style.width = "20%";
 }
 function closeNav(){
     document.getElementById('myslidepanel').style.width = "0";

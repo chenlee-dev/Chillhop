@@ -16,7 +16,7 @@ html{
 nav{
     display: flex;
     justify-content: space-between;
-    background-color: #1d1d1d;
+    background-color: rgba(29,29,29,0.7);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -108,12 +108,11 @@ left: 0;
 
 /* playing now */
 .big-container{
-    padding-top: 70px;
+    /* padding-top: 70px; */
     position: relative;
 }
 .bg-image-container{
     background-image: url('./pic/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpeg');
-    /* height: 800px; */
     height: 100vh;
     position: relative;
     filter: blur(3px);
@@ -121,18 +120,15 @@ left: 0;
 
 .playing-container{
     display: flex;
-    /* width: 100%; */
-    /* height: 280px; */
     float: left;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 10%;
-    /* margin: 50px 0px; */
 }
 
 .playing-container > div{
     display: flex;
-    width: 90%;
+    width: 100%;
     align-items: center;
  
 }
@@ -148,11 +144,13 @@ left: 0;
     justify-content: space-around;
     height: 280px;
     width: 45%;
-  
+}
+.song-details a{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .song-details h1{
     font-size: 45px;
-   
 }
 .song-details > p{
     overflow: hidden;
@@ -175,6 +173,7 @@ left: 0;
     margin: 0px 10px;
     font-size: 15px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .else > button:nth-child(1){
     background-color: #FB0D1B;
@@ -182,7 +181,10 @@ left: 0;
 .else > button:nth-child(2){
     background-color: #1DB954;
 }
-
+.else > button:hover{
+    border: 1px solid white;
+    background-color:rgba(221, 221, 221, 0.5);
+}
 .else-drop {
     width: 100%;
     text-align: center;
@@ -240,7 +242,7 @@ left: 0;
     background-color:inherit;
     padding: 20px 0px;
     position: absolute;
-    top: 60%;
+    top: 55%;
 }
 .text-latest-release{
     display: flex;
@@ -355,6 +357,7 @@ left: 0;
     font-size: 18px;
     margin: 15px 0px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .details button:hover{
     background-color:rgba(221, 221, 221, 0.5);
@@ -446,10 +449,17 @@ left: 0;
 }
 .follow button{
     background-color: #1DB954;
-    padding: 10px 20px;
+    width: 100px;
+    height: 40px;
     border: none;
     border-radius: 20px;
     margin: 0px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.follow button:hover{
+    border: 1px solid #1DB954;
+    background-color: transparent;
 }
 
 .subscribe-container{
@@ -479,6 +489,12 @@ left: 0;
     height: 40px;
     border: none;
     border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.user button:hover{
+    border: 1px solid #1DB954;
+    background-color: transparent;
 }
 
 
@@ -547,6 +563,7 @@ left: 0;
 .youtube-follow{
     display: flex;
     align-items: baseline;
+    text-transform: uppercase;
 }
 
 .youtube-follow button{
@@ -556,6 +573,7 @@ left: 0;
     margin: 0px 10px;
     height: 40px;
     color: black;
+    text-transform: uppercase;
 }
 .youtube-follow h3{
     display: inline;
@@ -613,6 +631,7 @@ left: 0;
 .follow-ins{
     display: flex;
     align-items: baseline;
+    text-transform: uppercase;
 }
 .follow-ins button{
     height: 40px;
@@ -621,6 +640,7 @@ left: 0;
     border: none;
     background-color: #458eff;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .follow-ins h3, .follow-ins i{
     color: black;
@@ -766,10 +786,91 @@ left: 0;
 
 @media screen and (max-width: 1000px){
     .album div:nth-child(4){
-        display: none;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 1024px){
+    .playing-container > div{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px){
+    /* playing-container */
+    .bg-image-container{
+        height: 150vh;
+    }
+    .playing-container{
+       top: 10%;
+       left: 1%;
+       width: 100%;
+    }
+    .playing-container > div{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .playing-container > div > img{
+        width: 100%;
+        background-size:cover;
+    }
+    /* chua xong o day */
+    .song-details{
+        width: 90%; 
+    }
+    .song-details > p{
+        -webkit-line-clamp: 2;
+    }
+
+    /* latest */
+    .latest-release{
+        top: 60%;
+    }
+    .album{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .album div:nth-child(3), .album div:nth-child(4){
+        display: none;
+    }
+    .album > div{
+        width: 45%;
+    }
+
+    /* shop */
+    .shop-items{
+        flex-direction: column;
+        align-items: center;
+    }
+    .shop-items img{
+        width: 50%;
+        padding-bottom: 20px;
+    }
+
+    /* spotify */
+    .subscribe-users{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .subscribe-users div:nth-child(5){
+        display: none;
+    }
+    .user{
+        width: 45%;
+    }
+
+    /* ins */
+    .ins-img{
+        flex-wrap: wrap;
+    }
+    .ins-img img{
+        width: 45%;
+        padding: 10px;
+    }
+    .ins-img img:nth-child(5){
+        display: none;
+    }
     
 }
