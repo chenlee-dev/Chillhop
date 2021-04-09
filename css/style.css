@@ -6,11 +6,8 @@
     list-style: none;
     text-decoration: none;
     color: white;
-    /* background-color: rgb(36, 36, 36); */
 }
-/* body{
-    overflow: hidden;
-} */
+
 html{
     scroll-behavior: smooth;
 
@@ -25,19 +22,7 @@ nav{
     position: fixed;
     z-index: 2;
     transition: 1s all;
-    /* position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;    */
 }
-
-/* nav > div,
-.checkbtn,
-.fa-bars, .fa-napster,
-.logo-img,
-.checkbtn-login{
-    background-color: inherit;
-} */
 
 .logo-img{
     font-family: 'Abril Fatface', sans-serif;
@@ -64,7 +49,6 @@ display:none;
 .drop-ul{
 position: fixed;
 width: 20%;
-/* height: 53.5vh; */
 height: 100vh;
 left: -100%;
 transition: all 1s;
@@ -88,37 +72,6 @@ left: 0;
 
 
 /* this is for login form */
-/* .checkbtn-login{
-    font-size: 35px;
-    line-height: 80px;
-    margin-right: 40px; */
-    /* cursor: pointer; */
-    /* display: block;
-    pointer-events: none;
-}
-
-form{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: lightblue;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 1s;
-}
-form label{
-    display: block;
-}
-#cb1 {
-    position: absolute;
-    top: 33px;
-    right: 50px;
-    cursor: pointer;
-}
-#cb1:checked ~ form{
-    left: 0;
-} */
 .login{
     width: 0;
     position: fixed;
@@ -138,7 +91,6 @@ form label{
 
 .login .closebtn{
     position: absolute;
-    /* top: 150px; */
     right: 25px;
     font-size: 25px;
 }
@@ -156,33 +108,31 @@ form label{
 
 /* playing now */
 .big-container{
-    background: url('./pic/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpeg') no-repeat;
-    background-size: cover;
-    padding-top: 100px;
+    padding-top: 70px;
+    position: relative;
 }
-/* .playing-container,
-.playing-container > div,
-.playing-container > div > img,
-.song-details,
-.song-details h1,
-.song-details > p,
-.else > h3,
-.else-drop li{
-    background-color: inherit;
-} */
+.bg-image-container{
+    background-image: url('./pic/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpeg');
+    /* height: 800px; */
+    height: 100vh;
+    position: relative;
+    filter: blur(3px);
+}
 
 .playing-container{
     display: flex;
-    width: 100%;
-    height: 280px;
+    /* width: 100%; */
+    /* height: 280px; */
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 10%;
     /* margin: 50px 0px; */
 }
 
 .playing-container > div{
     display: flex;
-    width: 80%;
-    margin: auto;
-    /* justify-content: center; */
+    width: 90%;
     align-items: center;
  
 }
@@ -197,7 +147,7 @@ form label{
     flex-direction: column;
     justify-content: space-around;
     height: 280px;
-    width: 100%;
+    width: 45%;
   
 }
 .song-details h1{
@@ -215,25 +165,8 @@ form label{
 }
 .else{
     display: flex;
-    /* justify-content: */
-}
-/* .else > h3{
-    border-radius: 20px;
-    padding: 9px 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    text-align: center;
 }
 
-.else > h3:nth-child(1){
-    background-color: #FB0D1B;
-}
-.else > h3:nth-child(2){
-    background-color: #1DB954;
-}
-.else > h3:nth-child(2) .fab{
-    background-color: transparent;
-} */
 .else button{
     border-radius: 20px;
     border: none;
@@ -259,8 +192,6 @@ form label{
     height: 40px;
     border: 1px solid white;
     border-radius: 20px;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
     padding: 10px 0px;
     cursor: pointer;
 }
@@ -300,17 +231,6 @@ form label{
 }
 
 /* latest release  */
-/* .latest-release, 
-.text-latest-release,
-.album > div,
-.album > div > img,
-.album > div > h3,
-.latest-release > div > h3,
-.latest-release > div,
-.album > div > h3 > strong{
-    background-color: inherit;
-} */
-
 .latest-release{
     display: flex;
     width: 100%;
@@ -319,6 +239,8 @@ form label{
     align-items: center;
     background-color:inherit;
     padding: 20px 0px;
+    position: absolute;
+    top: 60%;
 }
 .text-latest-release{
     display: flex;
@@ -330,7 +252,6 @@ form label{
 .album{
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
     width: 80%;
 }
 .album div{
@@ -340,7 +261,7 @@ form label{
 .album img{
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding-right: 20px;
 }
 
 
@@ -352,7 +273,6 @@ form label{
     height: 300px;
     width: 100%;
     background-color: white;
-    /* padding: 70px 0px; */
     text-align: center;
 }
 .listen-to-logo h3{
@@ -386,31 +306,33 @@ form label{
 /* Artist section */
 
 .details-container{
-    background: url('./pic/EVGj5gIUMAAheHg.jpeg') no-repeat;
+    position: relative;
+}
+.bg-image{
+    background-image:url('./pic/EVGj5gIUMAAheHg.jpeg');
     background-size: cover;
-    opacity: 0.9;
-    position: relative;
-    height: 500px;
-    padding: 30px ;
+    height: 600px;
     width: 100%;
-    /* filter: blur(5px); */
     position: relative;
+    filter: blur(3px);
 }
 
 .details{
     width: 70%;
     margin:auto;
-    height: 100%;
     text-align: center;
     background-color: initial;
-    padding: 10% 0px;
     z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding: 10px 0px;
+    color: white;
 }
 .details h1{
     font-weight: 800;
     font-family: 'Abril Fatface' , sans-serif;
     font-size: 35px;
-    /* z-index: 2; */
 }
 .details h3{
     padding: 15px 0px;
@@ -422,9 +344,7 @@ form label{
     -webkit-box-orient: vertical;
     word-break: break-all;
 }
-.details h1, .details p, .details h3{
-    background-color: inherit;
-}
+
 .details button{
     background-color: transparent;
     border-radius: 20px;
@@ -722,9 +642,7 @@ form label{
 
 /* footer */
 .footer-container{
-    /* background-color:rgb(71, 71, 71); */
     background-color: #1d1d1d;
-
     padding: 50px 0px;
     width: 100%;
     margin-bottom: 60px;
@@ -780,13 +698,11 @@ form label{
     border-radius: 50%;
     padding: 15px 0px;
     text-align: center;
-    /* color: black; */
     font-size: 20px;
     cursor: pointer;
 }
 
 /* music audio */
-
 .music{
     position: fixed;
     bottom: 0;
