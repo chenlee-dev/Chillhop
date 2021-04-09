@@ -143,7 +143,7 @@ left: 0;
     flex-direction: column;
     justify-content: space-around;
     height: 280px;
-    width: 45%;
+    /* width: 45%; */
 }
 .song-details a{
     text-decoration: underline;
@@ -157,9 +157,10 @@ left: 0;
     line-height: 1.2rem;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: break-all;
+    width: 55%;
 }
 .else{
     display: flex;
