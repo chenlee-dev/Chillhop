@@ -481,7 +481,8 @@ left: 0;
 }
 .user h3{
     text-align: center;
-    padding: 10px 0px;
+    height: 40px;
+    /* padding: 10px 0px; */
     font-size: 2vh;
 }
 .user button{
