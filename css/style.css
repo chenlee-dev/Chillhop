@@ -175,6 +175,7 @@ left: 0;
     font-size: 15px;
     cursor: pointer;
     text-transform: uppercase;
+    outline: none;
 }
 .else > button:nth-child(1){
     background-color: #FB0D1B;
@@ -520,6 +521,7 @@ left: 0;
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
+    flex-wrap: wrap;
 }
 
 /* youtube container */
@@ -668,6 +670,7 @@ left: 0;
     padding: 50px 0px;
     width: 100%;
     margin-bottom: 60px;
+    line-height: 40px;
 }
 
 .contact-container{
@@ -873,6 +876,63 @@ left: 0;
     }
     .ins-img img:nth-child(5){
         display: none;
+    }
+    
+}
+
+@media screen and (max-width: 411px){
+    /* login */
+    .drop-ul{
+        width: 50%;
+    }
+   
+    /* playing container */
+    .else button{
+        padding: 5px 20px; 
+    }
+    .song-details > p{
+        width: 100%;
+    }
+    /* details-container */
+    .details{
+        top: 15%;
+    }
+    .details p{
+        padding: 10px 0px;
+    }
+    /* listen to */
+    .logo{
+        width: 95%;
+    }
+    .logo h3{
+        padding: 15px 10px;
+        font-size: 25px;
+    }
+    /* shop */
+    .shop-container > div:nth-child(1){
+        display: flex;
+        align-items: baseline;
+    }
+
+    /* youtube */
+    .youtube-flex{
+        flex-direction: column;
+        line-height: 40px;
+        margin-bottom: 50px;
+    }
+    .youtube-follow{
+        padding: 20px 0px;
+    }
+    /* social */
+    .social-items{
+        justify-content: flex-start;
+    }
+    .social-items h3{
+        padding: 0px 10px;
+        line-height: 50px;
+    }
+    .livestream button{
+        font-size: 16px;
     }
     
 }

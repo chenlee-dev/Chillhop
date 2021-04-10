@@ -35,9 +35,14 @@ window.onscroll = function(){
 
 function openNav(){
     document.getElementById('myslidepanel').style.width = "20%";
+    if(screen.width === 411){
+        document.getElementById('myslidepanel').style.width = "50%";
+    }
 }
 function closeNav(){
     document.getElementById('myslidepanel').style.width = "0";
 }
+console.log(screen.width)
+
 
 
