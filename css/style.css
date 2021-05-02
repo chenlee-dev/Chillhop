@@ -880,7 +880,7 @@ left: 0;
     
 }
 
-@media screen and (max-width: 411px){
+@media screen and (max-width: 412px){
     /* login */
     .drop-ul{
         width: 50%;
@@ -935,4 +935,10 @@ left: 0;
         font-size: 16px;
     }
     
+}
+
+@media screen and (max-width: 360px){
+    .latest-release{
+        margin-top: 80px;
+    }
 }
